@@ -1,0 +1,49 @@
+body {
+    background-color: blanchedalmond;
+}
+#login-btn {
+    background-color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    color: white;    
+}
+#logo-section {
+    position: relative;
+    height: 150px;
+    background-color: yellowgreen;
+}
+.right-float {
+    float: right;
+    margin-right: 20px;
+}
+
+#logo-section #title {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 10px;
+    margin-left: 160px;
+    font-family: fantasy;
+    font-size: 75px;
+    font-weight: normal;
+
+}
+
+#logo-section #sub-title {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 90px;
+    margin-left: 160px;
+    font-family: sans-serif;
+    font-size: 18.5px;
+    font-weight: normal;
+}
+#logo-section form{
+    margin-top: 45px;
+    position: absolute;
+    top: 0;
+    right: 40;
+}
