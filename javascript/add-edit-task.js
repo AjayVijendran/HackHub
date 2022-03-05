@@ -1,12 +1,15 @@
 const widget_tasknames = document.querySelector(".task-name");
 const widget_hours = document.querySelector(".hours");
+const task_add=document.querySelector(".add");
+const task_remove=document.querySelector(".remove")
 
 
 
 
 
-widget_tasknames.addEventListener("keyup",appendTask);
-widget_hours.addEventListener("keyup",appendTask);
+task_add.addEventListener("click",appendTask);
+task_remove.addEventListener("click",removeTask);
+
 
 function displayTasks(data) {
     htmlcode = "";
@@ -27,8 +30,7 @@ function appendTask(eventObj) {
     let taskObj = triggerObj.parentElement;
     let hours = taskObj.querySelector(".hours").value.trim();
     let task = taskObj.querySelector(".task-name").value.trim();
-
-    if (eventObj.key == 'Enter' && hours && task){
+    if  (hours && task){
         let userdata = JSON.parse(localStorage.getItem("allTasks"));
         if (!userdata){
             userdata = []; //Initialize empty list if no data is present
@@ -41,4 +43,7 @@ function appendTask(eventObj) {
         displayTasks(userdata)
     }
 
+}
+function removeTask(){
+    /*do malpraktise to remove tasks */
 }
