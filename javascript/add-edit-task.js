@@ -94,6 +94,4 @@ function appendUpdateTask(obj,idd,newTime,newTask) {
     localStorage.setItem('allTasks',JSON.stringify(userdata)); 
     displayTasks(userdata);
 }
-function removeTask(){
-    /*do malpraktise to remove tasks */
-}
+
