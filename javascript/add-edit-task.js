@@ -1,12 +1,28 @@
 const widget_tasknames = document.querySelector(".task-name");
 const widget_hours = document.querySelector(".hours");
-const addb = document.querySelector(".add")
+//const addb = document.querySelector(".add")
 const addtaskb = document.querySelector(".Add-Task")
 
 
 
-addb.addEventListener("click",appendTask);
+//addb.addEventListener("click",appendTask);
+addtaskb.addEventListener("click",displayAdd);
 
+function displayAdd(event){
+    //let userdata = JSON.parse(localStorage.getItem("allTasks"));
+    let display = document.querySelector(".task-display");
+    let obj = document.createElement("div");
+    display.appendChild(obj)
+    htmlcode = `<input type="number" min = "0" max = "24" placeholder="n" class="hours"> 
+    <p>hours</p>
+    <input type="text" maxlength="32" class="task-name" placeholder="Enter Task Name">
+    <button class = "add">+</button>
+    <button class = "cancel" > - </button>`
+    obj.innerHTML= htmlcode;
+    obj.querySelector(".add").addEventListener("click", appendTask);
+    obj.querySelector(".cancel").addEventListener("click", function() {obj.remove()})
+
+}
 
 
 function displayTasks(data) {
