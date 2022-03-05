@@ -1,23 +1,151 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>DAILY PLANNER!</title>
-        <link rel = "stylesheet" href = "../css/index.css">
-	</head>
-	<body>
-		<div id="header">
-			<a href="#">TERMS AND CONDITIONS</a>
-			<a href="#">PRIVACY POLICY</a>
-			<button id="Login-button">LOGIN/SIGN-UP</button>	
-		</div>
-		<div id="logo-section">
-            <div class="left-float">
-                <img src="logo.gif" height="150px" width="150px" />
-                <h1 id="title">DAILY PLANNER</h1>
-                <h4 id="sub-title">PLAN YOUR LIFE AT YOUR FINGERTIPS!!</h4>
+<html lang="en">
+<head>
+<title>Malpraktise scheduler</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-                <p>This is Xaferdian here!</p>
-			</div>
-        </div>
-	</body>
+body {
+  font-family: Calibri, Arial, Times New Roman;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  padding: 10px;
+  text-align: left;
+  background: #2E8B57;
+  color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 15px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  background-color: #5C5C5C;
+  padding: 20px;
+}
+
+/Adding image/
+.img {
+  width: 100%;
+  padding: 50px;
+}
+
+/* Footer */
+.footer {
+  padding: 5px;
+  text-align: left;
+  background: #aaa;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>DAILY PLANNER</h1>
+  <p>Plan your busy life at your fingertips...</p>
+</div>
+
+<div class="navbar">
+  <a href="https://www.youtube.com/">Youtube</a>
+  <a href="https://www.google.co.in/">Google</a>
+  
+  <a href="http://www.vpropel.in/student/login?next=/code-test/list-code-test-sch/0/">Malpraktise prevails</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About Us</h2>
+    <div class="img"><img src="monkey.jpg" alt="monkeys" style="width:250px;height=250px;" align="top"></div>
+    <p>Premium website for planning your ideal timetable</p>
+    <h3>Malpraktise at your fingertips</h3>
+    <p>Get your schedule right and share with friends!</p>
+    <div class="img"> <img src="schedulericon.png" alt="icon" style="width:250px;height=250px;"> </div>
+    <div class="img"><img src="monkey.jpg" alt="monkeys" style="width:250px;height=250px;"></div>
+    <div class="img"><img src="monkey.jpg" alt="monkeys" style="width:250px;height=250px;"></div>
+  </div>
+  <div class="main">
+    <h2 style="color:white">SCHEDULE IT RIGHT</h2>
+    <h5 style="color:white">description</h5>
+    <div class="img"><img src="schedule2.jpg" alt="schedule" style="width:250px;height=250px;"></div>
+    <p style="color:white">Some text..</p>
+    <p style="color:white">ENter your tasks and complete them in a go</p>
+    <br>
+    <h2 style="color:white">DO IT</h2>
+    <h5 style="color:white">description</h5>
+    <div class="img"><img src="schedule1.jpg" alt="monkeys" style="width:250px;height=250px;"></div>
+    <p style="color:white">Get reminders for the upcoming schedule for the day</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>ALL RIGHTS RESERVED.</h2>
+</div>
+
+</body>
 </html>
