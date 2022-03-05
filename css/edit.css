@@ -1,6 +1,5 @@
 .add-task{
-    text-align: center;
-    margin-top: 20%;
+    display: flex;
 }
 .task-widget{
     display: flex;
