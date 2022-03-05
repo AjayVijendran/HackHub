@@ -1,5 +1,25 @@
-.add-task{
-    display: flex;
+body {
+    background-color: #61122f;
+}
+header{
+    text-align: center;
+    font-weight: bold;
+    background-color: #f6b319;
+}
+.add-task .hours{
+    width: 200px;
+}
+.add-task p{
+    font-weight: bolder;
+}
+.add-task .task-name{
+    width: 200px;
+}
+.add-task .add {
+    width: 200px;
+}
+.add-task .remove{
+    width: 200px;
 }
 .task-widget{
     display: flex;
