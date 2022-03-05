@@ -1,15 +1,39 @@
+/*
+TO DO: Limit sum total of hours to 20
+*/
+//Manage tasks button (Front-end)
+
+/* Onclick, redirect to another page. 
+(Each task has an unique id)
+Current Tasks 
+[2hrs of Javascript Learning, editButton]*/
+
+/*Each editButton will be linked with the task id
+
+On click of edit button beside already existing task
+
+[Time: <fill> , Task: <name> , saveButton, trashButton]
+
+Suppose addButton is clicked,
+
+[Time: <fill> , Task: <name> , saveButton, trashButton] (directly delete)*/
+
+
+//Manage Database (Backend)
+
+/* saveButton onclick function 
+update data in database */
+
 const widget_tasknames = document.querySelector(".task-name");
 const widget_hours = document.querySelector(".hours");
-//const addb = document.querySelector(".add")
 const addtaskb = document.querySelector(".Add-Task")
 
 
 
-//addb.addEventListener("click",appendTask);
+
 addtaskb.addEventListener("click",displayAdd);
 
 function displayAdd(event){
-    //let userdata = JSON.parse(localStorage.getItem("allTasks"));
     let display = document.querySelector(".task-display");
     let obj = document.createElement("div");
     display.appendChild(obj)
@@ -21,7 +45,6 @@ function displayAdd(event){
     obj.innerHTML= htmlcode;
     obj.querySelector(".add").addEventListener("click", appendTask);
     obj.querySelector(".cancel").addEventListener("click", function() {obj.remove()})
-
 }
 
 
@@ -33,7 +56,6 @@ function displayTasks(data) {
     });
 
     document.querySelector(".task-display").innerHTML = htmlcode;
-
             
     let allEdits = document.querySelectorAll(".edit")
 

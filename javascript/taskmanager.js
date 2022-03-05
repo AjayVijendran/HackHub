@@ -1,28 +1,28 @@
 
 
-//Manage tasks button (Front-end)
-
-/* Onclick, redirect to another page. 
-(Each task has an unique id)
-Current Tasks 
-[2hrs of Javascript Learning, editButton]*/
+let userdata = JSON.parse(localStorage.getItem("allTasks"))
 
 document.getElementById("mybutton").onclick= function (){
     location.href="../html/edit.html"
 }
 
-/*Each editButton will be linked with the task id
+function displayTasks(data) {
+    htmlcode = "";
+    data.forEach((value,id) => {
 
-On click of edit button beside already existing task
+        if (!value.progress){
+            value.progress = 0
+        }
+        htmlcode += `<div class = "task-widget"><p><span class = "display-hours">${value.progress}</span>/${value.time} hours of <span class = "display-task"> ${value.name}</span></p>
+        </div>`
+    });
 
-[Time: <fill> , Task: <name> , saveButton, trashButton]
+    document.querySelector(".display-tasks").innerHTML = htmlcode;
+            
+    let allEdits = document.querySelectorAll(".edit")
 
-Suppose addButton is clicked,
+    allEdits.forEach((object) => {object.addEventListener("click",editTask)})
 
-[Time: <fill> , Task: <name> , saveButton, trashButton] (directly delete)*/
+}
 
-
-//Manage Database (Backend)
-
-/* saveButton onclick function 
-update data in database */
+displayTasks(userdata)
