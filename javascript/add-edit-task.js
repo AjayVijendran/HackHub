@@ -95,7 +95,7 @@ function appendTask(eventObj) {
             userdata = []; //Initialize empty list if no data is present
         }
 
-        let taskInfo = {name: task, time: hours};
+        let taskInfo = {name: task, time: hours, completed: false, progress: 0};
         userdata.push(taskInfo);
         localStorage.setItem('allTasks',JSON.stringify(userdata)); //update userdata
 
