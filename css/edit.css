@@ -1,27 +1,34 @@
 body {
     margin: 0;
-    background-color: #61122f;
+    background-color:khaki;
 }
 header{
     text-align: center;
     font-weight: bold;
     background-color: #f6b319;
 }
-.add-task .hours{
-    width: 200px;
-}
-.add-task p{
-    font-weight: bolder;
-}
-.add-task .task-name{
-    width: 200px;
-}
-.add-task .add {
-    width: 200px;
-}
-.add-task .remove{
-    width: 200px;
+.task-display{
+    text-align: center;
+    width: 100%;
+    display: table;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
 }
 .task-widget{
-    display: flex;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+.edit{
+    color: #000;
+    background-color:gold;
+    padding: 10px;
+
+}
+.Add-Task{
+    padding: 10px;
+    margin-top: 5%;
+    margin-left: 47%;
+    background-color: chocolate;
 }
