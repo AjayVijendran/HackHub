@@ -98,20 +98,22 @@ async function startTimer(event){
         update.textContent = ((1-m)*time).toFixed(2);
         updateProgressBar(progressbar,((1-m)*100));
         timeleft -= 1 ;
+        console.log(timeleft);
         await delay(1000);
     }
     obj.classList.remove("active");
     obj.textContent = "Resume";
     console.log(timeleft/(60*60)); //remaining time left must be updated to database
     
-    if (timeleft == 0){
+    if (timeleft <= 0){
         userdata[task.id]["completed"] = true;
-        userdata[task.id]["progress"] = 0;
+        userdata[task.id]["progress"] = total;
         displayTasks(userdata);
         
     }
     else{
-        userdata[task.id]["progress"] = timeleft/(60*60);
+        userdata[task.id]["progress"] = total - (timeleft/(60*60));
+        console.log(userdata[task.id]["progress"]);
     }
 
     
