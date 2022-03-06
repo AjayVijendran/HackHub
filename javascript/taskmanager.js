@@ -112,7 +112,7 @@ async function startTimer(event){
         
     }
     else{
-        userdata[task.id]["progress"] = total - (timeleft/(60*60));
+        userdata[task.id]["progress"] = (total - timeleft)/(60*60);
         console.log(userdata[task.id]["progress"]);
     }
 
