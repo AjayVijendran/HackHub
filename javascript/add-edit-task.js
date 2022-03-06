@@ -34,6 +34,9 @@ const addtaskb = document.querySelector(".Add-Task")
 addtaskb.addEventListener("click",displayAdd);
 
 function displayAdd(event){
+
+    let buttonb = event.currentTarget;
+    buttonb.disabled = true;
     let display = document.querySelector(".task-display");
     let obj = document.createElement("div");
     display.appendChild(obj)
@@ -43,8 +46,12 @@ function displayAdd(event){
     <button class = "add">+</button>
     <button class = "cancel" > - </button>`
     obj.innerHTML= htmlcode;
-    obj.querySelector(".add").addEventListener("click", appendTask);
-    obj.querySelector(".cancel").addEventListener("click", function() {obj.remove()})
+    obj.querySelector(".add").addEventListener("click", function(eve) {
+        buttonb.disabled = false;
+        appendTask(eve)});
+    obj.querySelector(".cancel").addEventListener("click", function() {
+        buttonb.disabled = false;
+        obj.remove()})
 }
 
 
